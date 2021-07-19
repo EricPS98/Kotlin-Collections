@@ -15,4 +15,16 @@ fun main() {
     val salariosFiltro = salarios.filter { it > 2500 } //Pode interagir com outras expressões semelhantes
     println("---------------- Salarios maiores do que 2500 ---------------")
     salariosFiltro.forEach{ println(it)}
+
+    println("-----------------Contagem de salários entre 2000.0 e 5000.0 ------------------")
+    println(salarios.count{it in 2000.0..5000.0})
+
+    println("--------------- Encontrar um valor específico de salário")
+    println(salarios.find {it == 2350.0})
+    println(salarios.find {it == 550.0})
+
+    println("----------------- Validar se existe algum índice com valor de 1000.0 -------------")
+    println(salarios.any{it == 1000.0})
+    println("----------------- Validar se existe algum índice com valor de 500.0 -------------")
+    println(salarios.any{it == 500.0})
 }
